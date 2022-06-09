@@ -1,16 +1,40 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {%- seo -%}
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-    <link
-      rel="stylesheet"
-      href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
-    />
-  {%- feed_meta -%}
-  {%- include custom-head.html -%}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>
+    {% if page.title %}
+      {{ page.title }}
+    {% else %}
+      {{ site.title }}
+    {% endif %}
+  </title>
+
+  {% feed_meta %}
+
+  <meta property="og:title" content="Moonwalk">
+
+  <meta name="author" content="Test Author">
+
+  <meta property="og:locale" content="en_US">
+
+  <meta name="description" content="Moonwalk is a fast and elegant Jekyll theme with a clean dark mode. It comes with horizontal list (for navbar and footer), card list (for portfolio), and a generic vertical list. It is very easy to modify in case you want to build over it - please see _layouts/home.html to do that.">
+
+  <meta property="og:description" content="Moonwalk is a fast and elegant Jekyll theme with a clean dark mode. It comes with horizontal list (for navbar and footer), card list (for portfolio), and a generic vertical list. It is very easy to modify in case you want to build over it - please see _layouts/home.html to do that.">
+
+  <!-- <link rel="canonical" href="https://www.abhinavsaxena.com/moonwalk//moonwalk/"> -->
+
+  <!-- <meta property="og:url" content="https://www.abhinavsaxena.com/moonwalk//moonwalk/"> -->
+
+  <meta property="og:site_name" content="Moonwalk">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/{{ site.favicon | relative_url }}" />
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
+  
+
+
+
+
+  {%- include custom_head.html -%}
 </head>
